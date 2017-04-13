@@ -49,3 +49,4 @@ export interface IconButtonProps extends ButtonBaseProps {
 }
 
 export class IconButton extends React.Component<IconButtonProps, {}> { }
+export default IconButton
