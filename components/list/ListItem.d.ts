@@ -37,3 +37,4 @@ export interface ListItemProps extends ReactToolbox.Props {
 }
 
 export class ListItem extends React.Component<ListItemProps & ListItemLayoutProps, {}> { }
+export default ListItem

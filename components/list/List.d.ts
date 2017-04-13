@@ -30,3 +30,4 @@ export interface ListProps extends ReactToolbox.Props {
 }
 
 export class List extends React.Component<ListProps, {}> { }
+export default List
