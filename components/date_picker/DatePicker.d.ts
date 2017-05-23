@@ -86,6 +86,11 @@ export interface DatePickerTheme {
 
 export interface DatePickerProps extends ReactToolbox.Props {
   /**
+   * Hint in input.
+   * @default ""
+   */
+  hint?: string;
+  /**
    * Allows to control if the picker should be shown from outside. Beware you should update the prop when the Dialog is closed.
    * @default false
    */
@@ -154,6 +159,10 @@ export interface DatePickerProps extends ReactToolbox.Props {
    * Callback called when the picker value is changed.
    */
   onChange?: Function;
+  /**
+   * Callback fired on Input blur.
+   */
+  onBlur?: Function;
   /**
    * Callback fired on Input click.
    */
