@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { LIST } from '../identifiers';
@@ -8,21 +8,6 @@ const types = ['auto', 'normal', 'large'];
 
 const factory = (ListItemText) => {
   class ListItemContent extends Component {
-    static propTypes = {
-      caption: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.node,
-      ]),
-      children: PropTypes.node,
-      legend: PropTypes.string,
-      theme: PropTypes.shape({
-        auto: PropTypes.string,
-        itemContentRoot: PropTypes.string,
-        large: PropTypes.string,
-        normal: PropTypes.string,
-      }),
-      type: PropTypes.oneOf(types),
-    };
 
     getType() {
       const { type, children, caption, legend } = this.props;

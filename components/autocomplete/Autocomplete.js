@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
@@ -16,44 +16,6 @@ const POSITION = {
 
 const factory = (Chip, Input) => {
   class Autocomplete extends Component {
-    static propTypes = {
-      allowCreate: PropTypes.bool,
-      className: PropTypes.string,
-      direction: PropTypes.oneOf(['auto', 'up', 'down']),
-      disabled: PropTypes.bool,
-      error: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.node,
-      ]),
-      keepFocusOnChange: PropTypes.bool,
-      label: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.node,
-      ]),
-      multiple: PropTypes.bool,
-      onBlur: PropTypes.func,
-      onChange: PropTypes.func,
-      onFocus: PropTypes.func,
-      onQueryChange: PropTypes.func,
-      query: PropTypes.string,
-      selectedPosition: PropTypes.oneOf(['above', 'below', 'none']),
-      showSelectedWhenNotInSource: PropTypes.bool,
-      showSuggestionsWhenValueIsSet: PropTypes.bool,
-      source: PropTypes.any,
-      suggestionMatch: PropTypes.oneOf(['disabled', 'start', 'anywhere', 'word', 'none']),
-      theme: PropTypes.shape({
-        active: PropTypes.string,
-        autocomplete: PropTypes.string,
-        focus: PropTypes.string,
-        input: PropTypes.string,
-        suggestion: PropTypes.string,
-        suggestions: PropTypes.string,
-        up: PropTypes.string,
-        value: PropTypes.string,
-        values: PropTypes.string,
-      }),
-      value: PropTypes.any,
-    };
 
     static defaultProps = {
       allowCreate: false,

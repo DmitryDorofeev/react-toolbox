@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { List, ListItem } from 'react-toolbox';
 import classnames from 'classnames';
 import components from '../modules/components';
 import style from './navigation.css';
+import PropTypes from 'prop-types';
 
 const MainNavigation = ({ className }, { router }) => {
   const drawerItems = Object.keys(components).map((key) => {
@@ -28,10 +29,6 @@ const MainNavigation = ({ className }, { router }) => {
       </footer>
     </aside>
   );
-};
-
-MainNavigation.propTypes = {
-  className: PropTypes.string
 };
 
 MainNavigation.contextTypes = {

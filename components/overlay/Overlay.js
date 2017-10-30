@@ -1,22 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { OVERLAY } from '../identifiers';
 
 class Overlay extends Component {
-  static propTypes = {
-    active: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    lockScroll: PropTypes.bool,
-    onClick: PropTypes.func,
-    onEscKeyDown: PropTypes.func,
-    theme: PropTypes.shape({
-      active: PropTypes.string,
-      backdrop: PropTypes.string,
-      overlay: PropTypes.string,
-    }),
-  };
 
   static defaultProps = {
     lockScroll: true,

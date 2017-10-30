@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { SNACKBAR } from '../identifiers';
@@ -8,29 +8,6 @@ import Portal from '../hoc/Portal';
 
 const factory = (Button) => {
   class Snackbar extends Component {
-    static propTypes = {
-      action: PropTypes.string,
-      active: PropTypes.bool,
-      children: PropTypes.node,
-      className: PropTypes.string,
-      label: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      onClick: PropTypes.func,
-      onTimeout: PropTypes.func,
-      theme: PropTypes.shape({
-        accept: PropTypes.string,
-        active: PropTypes.string,
-        button: PropTypes.string,
-        cancel: PropTypes.string,
-        label: PropTypes.string,
-        snackbar: PropTypes.string,
-        warning: PropTypes.string,
-      }),
-      timeout: PropTypes.number,
-      type: PropTypes.oneOf(['accept', 'cancel', 'warning']),
-    };
 
     componentDidMount() {
       if (this.props.active && this.props.timeout) {

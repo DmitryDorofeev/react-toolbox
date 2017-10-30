@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { MENU } from '../identifiers';
@@ -7,27 +7,6 @@ import rippleFactory from '../ripple/Ripple';
 
 const factory = (ripple) => {
   class MenuItem extends Component {
-    static propTypes = {
-      caption: PropTypes.string,
-      children: PropTypes.node,
-      className: PropTypes.string,
-      disabled: PropTypes.bool,
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      onClick: PropTypes.func,
-      selected: PropTypes.bool,
-      shortcut: PropTypes.string,
-      theme: PropTypes.shape({
-        caption: PropTypes.string,
-        disabled: PropTypes.string,
-        icon: PropTypes.string,
-        menuItem: PropTypes.string,
-        selected: PropTypes.string,
-        shortcut: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       className: '',

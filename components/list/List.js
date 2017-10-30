@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { LIST } from '../identifiers';
@@ -12,13 +12,6 @@ const mergeProp = (propName, child, parent) => (
 
 const factory = (ListItem) => {
   class List extends Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      theme: PropTypes.shape({
-        list: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       className: '',

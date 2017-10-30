@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { TABS } from '../identifiers';
@@ -12,27 +12,6 @@ const factory = (Tab, TabContent, FontIcon) => {
   const isTabContent = child => isComponentOfType(TabContent, child);
 
   class Tabs extends Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      disableAnimatedBottomBorder: PropTypes.bool,
-      fixed: PropTypes.bool,
-      hideMode: PropTypes.oneOf(['display', 'unmounted']),
-      index: PropTypes.number,
-      inverse: PropTypes.bool,
-      onChange: PropTypes.func,
-      theme: PropTypes.shape({
-        arrow: PropTypes.string,
-        arrowContainer: PropTypes.string,
-        disableAnimation: PropTypes.string,
-        fixed: PropTypes.string,
-        inverse: PropTypes.string,
-        navigation: PropTypes.string,
-        navigationContainer: PropTypes.string,
-        pointer: PropTypes.string,
-        tabs: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       index: 0,

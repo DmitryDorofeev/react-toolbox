@@ -1,12 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 class Portal extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    container: PropTypes.node,
-  }
 
   static defaultProps = {
     className: '',

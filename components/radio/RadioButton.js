@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { RADIO } from '../identifiers';
@@ -7,29 +7,6 @@ import radioFactory from './Radio';
 
 const factory = (Radio) => {
   class RadioButton extends Component {
-    static propTypes = {
-      checked: PropTypes.bool,
-      children: PropTypes.node,
-      className: PropTypes.string,
-      disabled: PropTypes.bool,
-      label: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.node,
-      ]),
-      name: PropTypes.string,
-      onBlur: PropTypes.func,
-      onChange: PropTypes.func,
-      onFocus: PropTypes.func,
-      onMouseEnter: PropTypes.func,
-      onMouseLeave: PropTypes.func,
-      theme: PropTypes.shape({
-        disabled: PropTypes.string,
-        field: PropTypes.string,
-        input: PropTypes.string,
-        text: PropTypes.string,
-      }),
-      value: PropTypes.string,
-    };
 
     static defaultProps = {
       checked: false,

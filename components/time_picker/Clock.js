@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import CssTransitionGroup from 'react-addons-css-transition-group';
 import { getAnimationModule } from '../utils/utils';
 import time from '../utils/time';
@@ -6,18 +6,6 @@ import Hours from './ClockHours';
 import Minutes from './ClockMinutes';
 
 class Clock extends Component {
-  static propTypes = {
-    display: PropTypes.oneOf(['hours', 'minutes']),
-    format: PropTypes.oneOf(['24hr', 'ampm']),
-    onChange: PropTypes.func,
-    onHandMoved: PropTypes.func,
-    theme: PropTypes.shape({
-      clock: PropTypes.string,
-      clockWrapper: PropTypes.string,
-      placeholder: PropTypes.string,
-    }),
-    time: PropTypes.instanceOf(Date),
-  };
 
   static defaultProps = {
     className: '',

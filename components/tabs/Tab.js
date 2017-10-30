@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { FontIcon } from '../font_icon';
@@ -7,28 +7,6 @@ import rippleFactory from '../ripple/Ripple';
 
 const factory = (ripple) => {
   class Tab extends Component {
-    static propTypes = {
-      active: PropTypes.bool,
-      activeClassName: PropTypes.string,
-      children: PropTypes.node,
-      className: PropTypes.string,
-      disabled: PropTypes.bool,
-      hidden: PropTypes.bool,
-      icon: PropTypes.node,
-      index: PropTypes.number,
-      label: PropTypes.node,
-      onActive: PropTypes.func,
-      onClick: PropTypes.func,
-      theme: PropTypes.shape({
-        active: PropTypes.string,
-        disabled: PropTypes.string,
-        hidden: PropTypes.string,
-        label: PropTypes.string,
-        rippleWrapper: PropTypes.string,
-        withIcon: PropTypes.string,
-        withText: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       active: false,

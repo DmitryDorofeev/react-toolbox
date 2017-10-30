@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { INPUT } from '../identifiers';
@@ -6,58 +6,6 @@ import InjectedFontIcon from '../font_icon/FontIcon';
 
 const factory = (FontIcon) => {
   class Input extends React.Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      defaultValue: PropTypes.string,
-      disabled: PropTypes.bool,
-      error: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.node,
-      ]),
-      floating: PropTypes.bool,
-      hint: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.node,
-      ]),
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      label: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.node,
-      ]),
-      maxLength: PropTypes.number,
-      multiline: PropTypes.bool,
-      name: PropTypes.string,
-      onBlur: PropTypes.func,
-      onChange: PropTypes.func,
-      onFocus: PropTypes.func,
-      onKeyPress: PropTypes.func,
-      required: PropTypes.bool,
-      rows: PropTypes.number,
-      theme: PropTypes.shape({
-        bar: PropTypes.string,
-        counter: PropTypes.string,
-        disabled: PropTypes.string,
-        error: PropTypes.string,
-        errored: PropTypes.string,
-        hidden: PropTypes.string,
-        hint: PropTypes.string,
-        icon: PropTypes.string,
-        input: PropTypes.string,
-        inputElement: PropTypes.string,
-        required: PropTypes.string,
-        withIcon: PropTypes.string,
-      }),
-      type: PropTypes.string,
-      value: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.object,
-        PropTypes.string,
-      ]),
-    };
 
     static defaultProps = {
       className: '',

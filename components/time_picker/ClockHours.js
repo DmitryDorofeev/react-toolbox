@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { range } from '../utils/utils';
 import Hand from './ClockHand';
 import Face from './ClockFace';
@@ -9,19 +9,6 @@ const innerSpacing = 1.7;
 const step = 360 / 12;
 
 class Hours extends Component {
-  static propTypes = {
-    center: PropTypes.shape({
-      x: PropTypes.number,
-      y: PropTypes.number,
-    }),
-    format: PropTypes.oneOf(['24hr', 'ampm']),
-    onChange: PropTypes.func,
-    onHandMoved: PropTypes.func,
-    radius: PropTypes.number,
-    selected: PropTypes.number,
-    spacing: PropTypes.number,
-    theme: PropTypes.object, // eslint-disable-line
-  };
 
   state = {
     inner: this.props.format === '24hr' && this.props.selected > 0 && this.props.selected <= 12,

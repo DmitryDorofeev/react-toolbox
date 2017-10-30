@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { DATE_PICKER } from '../identifiers';
@@ -13,46 +13,6 @@ import datePickerDialogFactory from './DatePickerDialog';
 
 const factory = (Input, DatePickerDialog) => {
   class DatePicker extends Component {
-    static propTypes = {
-      active: PropTypes.bool,
-      autoOk: PropTypes.bool,
-      cancelLabel: PropTypes.string,
-      className: PropTypes.string,
-      disabledDates: React.PropTypes.arrayOf(PropTypes.instanceOf(Date)),
-      enabledDates: React.PropTypes.arrayOf(PropTypes.instanceOf(Date)),
-      error: PropTypes.string,
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      inputClassName: PropTypes.string,
-      inputFormat: PropTypes.func,
-      label: PropTypes.string,
-      locale: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.object,
-      ]),
-      maxDate: PropTypes.instanceOf(Date),
-      minDate: PropTypes.instanceOf(Date),
-      name: PropTypes.string,
-      okLabel: PropTypes.string,
-      onChange: PropTypes.func,
-      onClick: PropTypes.func,
-      onDismiss: PropTypes.func,
-      onEscKeyDown: PropTypes.func,
-      onKeyPress: PropTypes.func,
-      onOverlayClick: PropTypes.func,
-      readonly: PropTypes.bool,
-      sundayFirstDayOfWeek: React.PropTypes.bool,
-      theme: PropTypes.shape({
-        container: PropTypes.string,
-        input: PropTypes.string,
-      }),
-      value: PropTypes.oneOfType([
-        PropTypes.instanceOf(Date),
-        PropTypes.string,
-      ]),
-    };
 
     static defaultProps = {
       active: false,

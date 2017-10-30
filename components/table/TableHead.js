@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, cloneElement } from 'react';
+import React, { Component, cloneElement } from 'react';
 import { themr } from 'react-css-themr';
 import { TABLE } from '../identifiers';
 import InjectCheckbox from '../checkbox/Checkbox';
@@ -6,18 +6,6 @@ import InjectTableCell from './TableCell';
 
 const factory = (Checkbox, TableCell) => {
   class TableHead extends Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      displaySelect: PropTypes.bool,
-      multiSelectable: PropTypes.bool,
-      onSelect: PropTypes.func,
-      selectable: PropTypes.bool,
-      selected: PropTypes.bool,
-      theme: PropTypes.shape({
-        checkboxCell: PropTypes.string,
-      }),
-    }
 
     static defaultProps = {
       displaySelect: true,

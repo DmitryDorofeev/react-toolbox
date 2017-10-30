@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import cn from 'classnames';
 import { themr } from 'react-css-themr';
 import { APP_BAR } from '../identifiers';
@@ -6,38 +6,6 @@ import InjectIconButton from '../button/IconButton';
 
 const factory = (IconButton) => {
   class AppBar extends React.Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      fixed: PropTypes.bool,
-      flat: PropTypes.bool,
-      leftIcon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      onLeftIconClick: PropTypes.func,
-      onRightIconClick: PropTypes.func,
-      rightIcon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      scrollHide: PropTypes.bool,
-      theme: PropTypes.shape({
-        appBar: PropTypes.string,
-        inner: PropTypes.string,
-        fixed: PropTypes.string,
-        flat: PropTypes.string,
-        leftIcon: PropTypes.string,
-        rightIcon: PropTypes.string,
-        scrollHide: PropTypes.string,
-        title: PropTypes.string,
-      }),
-      title: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-    };
-
     static defaultProps = {
       className: '',
       fixed: false,

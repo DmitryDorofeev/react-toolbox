@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { themr } from 'react-css-themr';
 import classnames from 'classnames';
 import Portal from '../hoc/Portal';
@@ -42,25 +42,6 @@ const factory = (Overlay) => {
       ),
       content,
     );
-  };
-
-  Drawer.propTypes = {
-    active: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    insideTree: PropTypes.bool,
-    onEscKeyDown: PropTypes.func,
-    onOverlayClick: PropTypes.func,
-    theme: PropTypes.shape({
-      active: PropTypes.string,
-      drawer: PropTypes.string,
-      left: PropTypes.string,
-      right: PropTypes.string,
-    }),
-    type: PropTypes.oneOf([
-      'left', 'right',
-    ]),
-    withOverlay: PropTypes.bool,
   };
 
   Drawer.defaultProps = {

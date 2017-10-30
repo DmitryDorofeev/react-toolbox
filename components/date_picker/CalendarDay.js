@@ -1,21 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import time from '../utils/time';
 
 class Day extends Component {
-  static propTypes = {
-    day: PropTypes.number,
-    disabled: PropTypes.bool,
-    onClick: PropTypes.func,
-    selectedDate: PropTypes.instanceOf(Date),
-    sundayFirstDayOfWeek: PropTypes.bool,
-    theme: PropTypes.shape({
-      active: PropTypes.string,
-      day: PropTypes.string,
-      disabled: PropTypes.string,
-    }),
-    viewDate: PropTypes.instanceOf(Date),
-  };
 
   dayStyle() {
     if (this.props.day === 1) {

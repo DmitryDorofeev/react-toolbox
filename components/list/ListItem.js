@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { themr } from 'react-css-themr';
 import { LIST } from '../identifiers';
 import InjectListItemContent from './ListItemContent';
@@ -7,20 +7,6 @@ import rippleFactory from '../ripple/Ripple';
 
 const factory = (ripple, ListItemLayout, ListItemContent) => {
   class ListItem extends Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      disabled: PropTypes.bool,
-      hasRipple: PropTypes.bool,
-      onClick: PropTypes.func,
-      onMouseDown: PropTypes.func,
-      onTouchStart: PropTypes.func,
-      ripple: PropTypes.bool,
-      theme: PropTypes.shape({
-        listItem: PropTypes.string,
-      }),
-      to: PropTypes.string,
-    };
 
     static defaultProps = {
       className: '',

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
@@ -9,47 +9,6 @@ import events from '../utils/events';
 
 const factory = (Input) => {
   class Dropdown extends Component {
-    static propTypes = {
-      allowBlank: PropTypes.bool,
-      auto: PropTypes.bool,
-      className: PropTypes.string,
-      disabled: PropTypes.bool,
-      error: PropTypes.string,
-      label: PropTypes.string,
-      labelKey: PropTypes.string,
-      name: PropTypes.string,
-      onBlur: PropTypes.func,
-      onChange: PropTypes.func,
-      onClick: PropTypes.func,
-      onFocus: PropTypes.func,
-      required: PropTypes.bool,
-      source: PropTypes.arrayOf(PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.object,
-      ])).isRequired,
-      template: PropTypes.func,
-      theme: PropTypes.shape({
-        active: PropTypes.string,
-        disabled: PropTypes.string,
-        dropdown: PropTypes.string,
-        error: PropTypes.string,
-        errored: PropTypes.string,
-        field: PropTypes.string,
-        label: PropTypes.string,
-        required: PropTypes.string,
-        selected: PropTypes.string,
-        templateValue: PropTypes.string,
-        up: PropTypes.string,
-        value: PropTypes.string,
-        values: PropTypes.string,
-      }),
-      value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-      ]),
-      valueKey: PropTypes.string,
-    };
-
     static defaultProps = {
       auto: true,
       className: '',

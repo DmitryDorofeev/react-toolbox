@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import InjectDrawer from '../drawer/Drawer';
@@ -31,20 +31,6 @@ const factory = (Drawer) => {
         withOverlay={!pinned}
       />
     );
-  };
-
-  Sidebar.propTypes = {
-    active: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    clipped: PropTypes.bool,
-    permanentAt: PropTypes.oneOf(['sm', 'smTablet', 'md', 'lg', 'lgTablet', 'xl', 'xxl', 'xxxl']),
-    pinned: PropTypes.bool,
-    theme: PropTypes.shape({
-      clipped: PropTypes.string,
-      pinned: PropTypes.string,
-    }),
-    width: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 33, 50, 66, 75, 100]),
   };
 
   Sidebar.defaultProps = {

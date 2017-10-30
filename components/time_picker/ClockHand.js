@@ -1,25 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { angle360FromPositions } from '../utils/utils';
 import events from '../utils/events';
 import prefixer from '../utils/prefixer';
 
 class Hand extends Component {
-  static propTypes = {
-    angle: PropTypes.number,
-    className: PropTypes.string,
-    length: PropTypes.number,
-    onMove: PropTypes.func,
-    onMoved: PropTypes.func,
-    origin: PropTypes.shape({
-      x: PropTypes.number,
-      y: PropTypes.number,
-    }),
-    step: PropTypes.number,
-    theme: PropTypes.shape({
-      hand: PropTypes.string,
-      knob: PropTypes.string,
-    }),
-  };
 
   static defaultProps = {
     className: '',

@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import Portal from '../hoc/Portal';
@@ -38,26 +38,6 @@ const tooltipFactory = (options = {}) => {
 
   return (ComposedComponent) => {
     class TooltippedComponent extends Component {
-      static propTypes = {
-        children: PropTypes.node,
-        className: PropTypes.string,
-        onClick: PropTypes.func,
-        onMouseEnter: PropTypes.func,
-        onMouseLeave: PropTypes.func,
-        theme: PropTypes.shape({
-          tooltip: PropTypes.string,
-          tooltipActive: PropTypes.string,
-          tooltipWrapper: PropTypes.string,
-        }),
-        tooltip: PropTypes.oneOfType([
-          PropTypes.string,
-          PropTypes.node,
-        ]),
-        tooltipDelay: PropTypes.number,
-        tooltipHideOnClick: PropTypes.bool,
-        tooltipPosition: PropTypes.oneOf(Object.keys(POSITION).map(key => POSITION[key])),
-        tooltipShowOnClick: PropTypes.bool,
-      };
 
       static defaultProps = {
         className: defaultClassName,

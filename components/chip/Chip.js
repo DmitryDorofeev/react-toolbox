@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { CHIP } from '../identifiers';
@@ -32,21 +32,6 @@ const factory = (Avatar) => {
         }
       </div>
     );
-  };
-
-  Chip.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    deletable: PropTypes.bool,
-    onDeleteClick: PropTypes.func,
-    theme: PropTypes.shape({
-      avatar: PropTypes.string,
-      chip: PropTypes.string,
-      deletable: PropTypes.string,
-      delete: PropTypes.string,
-      deleteIcon: PropTypes.string,
-      deleteX: PropTypes.string,
-    }),
   };
 
   Chip.defaultProps = {

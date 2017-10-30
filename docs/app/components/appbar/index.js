@@ -19,10 +19,6 @@ const MainAppBar = (props) => {
   );
 };
 
-MainAppBar.propTypes = {
-  className: React.PropTypes.string
-};
-
 MainAppBar.defaultProps = {
   className: ''
 };

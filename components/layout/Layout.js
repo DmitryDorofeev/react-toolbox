@@ -1,4 +1,4 @@
-import React, { cloneElement, Component, PropTypes } from 'react';
+import React, { cloneElement, Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { getViewport } from '../utils/utils';
@@ -18,18 +18,6 @@ const factory = (AppBar, NavDrawer, Sidebar) => {
   const isUnknown = child => !isNavDrawer(child) && !isSidebar(child) && !isAppBar(child);
 
   class Layout extends Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      theme: PropTypes.shape({
-        appbarFixed: PropTypes.string,
-        layout: PropTypes.string,
-        navDrawerClipped: PropTypes.string,
-        navDrawerPinned: PropTypes.string,
-        sidebarClipped: PropTypes.string,
-        sidebarPinned: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       className: '',

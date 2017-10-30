@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { AVATAR } from '../identifiers';
@@ -14,22 +14,6 @@ const factory = (FontIcon) => {
       {title ? <span className={theme.letter}>{title[0]}</span> : null}
     </div>
   );
-
-  Avatar.propTypes = {
-    alt: PropTypes.string,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    cover: PropTypes.bool,
-    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-    image: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-    theme: PropTypes.shape({
-      avatar: PropTypes.string,
-      image: PropTypes.string,
-      letter: PropTypes.string,
-    }),
-    title: PropTypes.string,
-  };
-
   Avatar.defaultProps = {
     alt: '',
     cover: false,

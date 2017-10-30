@@ -1,12 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 const ActivableRendererFactory = (options = { delay: 500 }) =>
   ActivableComponent => class ActivableRenderer extends Component {
-    static propTypes = {
-      active: PropTypes.bool.isRequired,
-      children: PropTypes.node,
-      delay: PropTypes.number,
-    };
 
     static defaultProps = {
       delay: options.delay,

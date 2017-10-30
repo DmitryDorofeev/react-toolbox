@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { LIST } from '../identifiers';
@@ -10,16 +10,6 @@ const ListItemText = ({ className, primary, children, theme, ...other }) => {
       {children}
     </span>
   );
-};
-
-ListItemText.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  primary: PropTypes.bool,
-  theme: PropTypes.shape({
-    itemText: PropTypes.string,
-    primary: PropTypes.string,
-  }),
 };
 
 ListItemText.defaultProps = {

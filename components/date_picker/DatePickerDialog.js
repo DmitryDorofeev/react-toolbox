@@ -1,41 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import time from '../utils/time';
 
 const factory = (Dialog, Calendar) => {
   class CalendarDialog extends Component {
-    static propTypes = {
-      active: PropTypes.bool,
-      autoOk: PropTypes.bool,
-      cancelLabel: PropTypes.string,
-      className: PropTypes.string,
-      disabledDates: React.PropTypes.arrayOf(PropTypes.instanceOf(Date)),
-      enabledDates: React.PropTypes.arrayOf(PropTypes.instanceOf(Date)),
-      locale: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.object,
-      ]),
-      maxDate: PropTypes.instanceOf(Date),
-      minDate: PropTypes.instanceOf(Date),
-      name: PropTypes.string,
-      okLabel: PropTypes.string,
-      onDismiss: PropTypes.func,
-      onEscKeyDown: PropTypes.func,
-      onOverlayClick: PropTypes.func,
-      onSelect: PropTypes.func,
-      sundayFirstDayOfWeek: React.PropTypes.bool,
-      theme: PropTypes.shape({
-        button: PropTypes.string,
-        calendarWrapper: PropTypes.string,
-        date: PropTypes.string,
-        dialog: PropTypes.string,
-        header: PropTypes.string,
-        monthsDisplay: PropTypes.string,
-        year: PropTypes.string,
-        yearsDisplay: PropTypes.string,
-      }),
-      value: PropTypes.instanceOf(Date),
-    };
 
     static defaultProps = {
       active: false,

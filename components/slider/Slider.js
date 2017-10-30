@@ -1,7 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
-import styleShape from 'react-style-proptype';
 import { themr } from 'react-css-themr';
 import { round, range } from '../utils/utils';
 import { SLIDER } from '../identifiers';
@@ -11,37 +10,6 @@ import InjectInput from '../input/Input';
 
 const factory = (ProgressBar, Input) => {
   class Slider extends Component {
-    static propTypes = {
-      buffer: PropTypes.number,
-      className: PropTypes.string,
-      disabled: PropTypes.bool,
-      editable: PropTypes.bool,
-      max: PropTypes.number,
-      min: PropTypes.number,
-      onChange: PropTypes.func,
-      onDragStart: PropTypes.func,
-      onDragStop: PropTypes.func,
-      pinned: PropTypes.bool,
-      snaps: PropTypes.bool,
-      step: PropTypes.number,
-      style: styleShape,
-      theme: PropTypes.shape({
-        container: PropTypes.string,
-        editable: PropTypes.string,
-        innerknob: PropTypes.string,
-        innerprogress: PropTypes.string,
-        input: PropTypes.string,
-        knob: PropTypes.string,
-        pinned: PropTypes.string,
-        pressed: PropTypes.string,
-        progress: PropTypes.string,
-        ring: PropTypes.string,
-        slider: PropTypes.string,
-        snap: PropTypes.string,
-        snaps: PropTypes.string,
-      }),
-      value: PropTypes.number,
-    };
 
     static defaultProps = {
       buffer: 0,

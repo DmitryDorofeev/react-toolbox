@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
-import styleShape from 'react-style-proptype';
 
 const factory = (ripple) => {
   const Check = ({ checked, children, onMouseDown, theme, style }) => (
@@ -13,17 +12,6 @@ const factory = (ripple) => {
       {children}
     </div>
   );
-
-  Check.propTypes = {
-    checked: PropTypes.bool,
-    children: PropTypes.node,
-    onMouseDown: PropTypes.func,
-    style: styleShape,
-    theme: PropTypes.shape({
-      check: PropTypes.string,
-      checked: PropTypes.string,
-    }),
-  };
 
   return ripple(Check);
 };

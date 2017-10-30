@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { themr } from 'react-css-themr';
 import classnames from 'classnames';
 import { DIALOG } from '../identifiers';
@@ -46,35 +46,6 @@ const factory = (Overlay, Button) => {
         </div>
       </Portal>
     );
-  };
-
-  Dialog.propTypes = {
-    actions: PropTypes.arrayOf(PropTypes.shape({
-      className: PropTypes.string,
-      label: PropTypes.string,
-      children: PropTypes.node,
-    })),
-    active: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    onEscKeyDown: PropTypes.func,
-    onOverlayClick: PropTypes.func,
-    onOverlayMouseDown: PropTypes.func,
-    onOverlayMouseMove: PropTypes.func,
-    onOverlayMouseUp: PropTypes.func,
-    theme: PropTypes.shape({
-      active: PropTypes.string,
-      body: PropTypes.string,
-      button: PropTypes.string,
-      dialog: PropTypes.string,
-      navigation: PropTypes.string,
-      overflow: PropTypes.string,
-      overlay: PropTypes.string,
-      title: PropTypes.string,
-      wrapper: PropTypes.string,
-    }),
-    title: PropTypes.string,
-    type: PropTypes.string,
   };
 
   Dialog.defaultProps = {

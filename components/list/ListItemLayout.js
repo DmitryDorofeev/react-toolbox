@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { LIST } from '../identifiers';
@@ -35,34 +35,6 @@ const factory = (Avatar, ListItemContent, ListItemActions) => {
         {!emptyActions(rightActions) > 0 && <ListItemActions type="right" theme={props.theme}>{rightActions}</ListItemActions>}
       </span>
     );
-  };
-
-  ListItemLayout.propTypes = {
-    avatar: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    caption: PropTypes.string,
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    itemContent: PropTypes.element,
-    leftActions: PropTypes.arrayOf(PropTypes.node),
-    leftIcon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    legend: PropTypes.string,
-    rightActions: PropTypes.arrayOf(PropTypes.node),
-    rightIcon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    selectable: PropTypes.bool,
-    theme: PropTypes.shape({
-      disabled: PropTypes.string,
-      item: PropTypes.string,
-      selectable: PropTypes.string,
-    }),
   };
 
   ListItemLayout.defaultProps = {

@@ -1,6 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
-import styleShape from 'react-style-proptype';
 import { themr } from 'react-css-themr';
 import { CHECKBOX } from '../identifiers';
 import rippleFactory from '../ripple/Ripple';
@@ -8,27 +7,6 @@ import checkFactory from './Check';
 
 const factory = (Check) => {
   class Checkbox extends Component {
-    static propTypes = {
-      checked: PropTypes.bool,
-      children: PropTypes.node,
-      className: PropTypes.string,
-      disabled: PropTypes.bool,
-      label: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.node,
-      ]),
-      name: PropTypes.string,
-      onChange: PropTypes.func,
-      onMouseEnter: PropTypes.func,
-      onMouseLeave: PropTypes.func,
-      style: styleShape,
-      theme: PropTypes.shape({
-        disabled: PropTypes.string,
-        field: PropTypes.string,
-        input: PropTypes.string,
-        ripple: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       checked: false,

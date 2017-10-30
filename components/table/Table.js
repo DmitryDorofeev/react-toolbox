@@ -1,4 +1,4 @@
-import React, { PropTypes, Component, cloneElement } from 'react';
+import React, { Component, cloneElement } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import filterReactChildren from '../utils/filter-react-children';
@@ -12,17 +12,6 @@ const factory = (TableHead, TableRow) => {
   const isTableRow = child => isComponentOfType(TableRow, child);
 
   class Table extends Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      multiSelectable: PropTypes.bool,
-      onRowSelect: PropTypes.func,
-      selectable: PropTypes.bool,
-      theme: PropTypes.shape({
-        head: PropTypes.string,
-        table: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       className: '',

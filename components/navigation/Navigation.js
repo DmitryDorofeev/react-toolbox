@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { NAVIGATION } from '../identifiers';
@@ -23,20 +23,6 @@ const factory = (Button, Link) => {
         {children}
       </nav>
     );
-  };
-
-  Navigation.propTypes = {
-    actions: PropTypes.array, // eslint-disable-line
-    children: PropTypes.node,
-    className: PropTypes.string,
-    routes: PropTypes.array, // eslint-disable-line
-    theme: PropTypes.shape({
-      button: PropTypes.string,
-      horizontal: PropTypes.string,
-      link: PropTypes.string,
-      vertical: PropTypes.string,
-    }),
-    type: PropTypes.oneOf(['vertical', 'horizontal']),
   };
 
   Navigation.defaultProps = {

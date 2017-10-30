@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 
 const FontIcon = ({ alt, children, className, theme, value, ...other}) => ( // eslint-disable-line
@@ -12,17 +12,6 @@ const FontIcon = ({ alt, children, className, theme, value, ...other}) => ( // e
     {children}
   </span>
 );
-
-FontIcon.propTypes = {
-  alt: PropTypes.string,
-  children: PropTypes.node,
-  className: PropTypes.string,
-  theme: PropTypes.object, // eslint-disable-line
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
-};
 
 FontIcon.defaultProps = {
   alt: '',

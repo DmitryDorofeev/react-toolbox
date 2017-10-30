@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { range } from '../utils/utils';
 import Hand from './ClockHand';
 import Face from './ClockFace';
@@ -7,19 +7,6 @@ const minutes = range(0, 60, 5);
 const step = 360 / 60;
 
 class Minutes extends Component {
-  static propTypes = {
-    center: PropTypes.shape({
-      x: PropTypes.number,
-      y: PropTypes.number,
-    }),
-    onChange: PropTypes.func,
-    radius: PropTypes.number,
-    selected: PropTypes.number,
-    spacing: PropTypes.number,
-    theme: PropTypes.shape({
-      small: PropTypes.string,
-    }),
-  };
 
   static defaultProps = {
     selected: 0,

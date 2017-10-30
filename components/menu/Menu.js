@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
@@ -18,31 +18,6 @@ const POSITION = {
 
 const factory = (MenuItem) => {
   class Menu extends Component {
-    static propTypes = {
-      active: PropTypes.bool,
-      children: PropTypes.node,
-      className: PropTypes.string,
-      onHide: PropTypes.func,
-      onSelect: PropTypes.func,
-      onShow: PropTypes.func,
-      outline: PropTypes.bool,
-      position: PropTypes.oneOf(Object.keys(POSITION).map(key => POSITION[key])),
-      ripple: PropTypes.bool,
-      selectable: PropTypes.bool,
-      selected: PropTypes.node,
-      theme: PropTypes.shape({
-        active: PropTypes.string,
-        bottomLeft: PropTypes.string,
-        bottomRight: PropTypes.string,
-        menu: PropTypes.string,
-        menuInner: PropTypes.string,
-        outline: PropTypes.string,
-        rippled: PropTypes.string,
-        static: PropTypes.string,
-        topLeft: PropTypes.string,
-        topRight: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       active: false,

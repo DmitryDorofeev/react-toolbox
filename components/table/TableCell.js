@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { TABLE } from '../identifiers';
@@ -9,28 +9,9 @@ const DESC = 'desc';
 
 const factory = (FontIcon) => {
   class TableCell extends Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      column: PropTypes.number,
-      numeric: PropTypes.bool,
-      onClick: PropTypes.func,
-      row: PropTypes.number,
-      sorted: PropTypes.oneOf([ASC, DESC]),
-      tagName: PropTypes.oneOf(['td', 'th']),
-      theme: PropTypes.shape({
-        asc: PropTypes.string,
-        headCell: PropTypes.string,
-        numeric: PropTypes.string,
-        rowCell: PropTypes.string,
-        sorted: PropTypes.string,
-        sortIcon: PropTypes.string,
-        tableCell: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
-      children: PropTypes.node,
+      children: [],
       className: '',
       numeric: false,
       tagName: 'td',

@@ -1,32 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { PROGRESS_BAR } from '../identifiers';
 import prefixer from '../utils/prefixer';
 
 class ProgressBar extends Component {
-  static propTypes = {
-    buffer: PropTypes.number,
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    max: PropTypes.number,
-    min: PropTypes.number,
-    mode: PropTypes.oneOf(['determinate', 'indeterminate']),
-    multicolor: PropTypes.bool,
-    theme: PropTypes.shape({
-      buffer: PropTypes.string,
-      circle: PropTypes.string,
-      circular: PropTypes.string,
-      indeterminate: PropTypes.string,
-      linear: PropTypes.string,
-      multicolor: PropTypes.string,
-      path: PropTypes.string,
-      value: PropTypes.string,
-    }),
-    type: PropTypes.oneOf(['linear', 'circular']),
-    value: PropTypes.number,
-  };
-
   static defaultProps = {
     buffer: 0,
     className: '',

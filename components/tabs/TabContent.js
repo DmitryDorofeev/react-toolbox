@@ -1,20 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { TABS } from '../identifiers';
 
 class TabContent extends Component {
-  static propTypes = {
-    active: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    tabIndex: PropTypes.number,
-    theme: PropTypes.shape({
-      active: PropTypes.string,
-      tab: PropTypes.string,
-    }),
-  };
-
   static defaultProps = {
     active: false,
     className: '',

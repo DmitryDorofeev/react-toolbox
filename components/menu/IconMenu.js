@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { MENU } from '../identifiers';
@@ -7,27 +7,6 @@ import InjectMenu from './Menu';
 
 const factory = (IconButton, Menu) => {
   class IconMenu extends Component {
-    static propTypes = {
-      children: PropTypes.node,
-      className: PropTypes.string,
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      iconRipple: PropTypes.bool,
-      menuRipple: PropTypes.bool,
-      onClick: PropTypes.func,
-      onHide: PropTypes.func,
-      onSelect: PropTypes.func,
-      onShow: PropTypes.func,
-      position: PropTypes.string,
-      selectable: PropTypes.bool,
-      selected: PropTypes.node,
-      theme: PropTypes.shape({
-        icon: PropTypes.string,
-        iconMenu: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       className: '',

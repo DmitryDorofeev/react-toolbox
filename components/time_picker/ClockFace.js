@@ -1,20 +1,8 @@
 /* eslint-disable no-mixed-operators */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 
 class Face extends Component {
-  static propTypes = {
-    active: PropTypes.number,
-    numbers: PropTypes.arrayOf(PropTypes.number),
-    radius: PropTypes.number,
-    spacing: PropTypes.number,
-    theme: PropTypes.shape({
-      active: PropTypes.string,
-      face: PropTypes.string,
-      number: PropTypes.string,
-    }),
-    twoDigits: PropTypes.bool,
-  };
 
   static defaultProps = {
     active: null,

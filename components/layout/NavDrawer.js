@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import InjectDrawer from '../drawer/Drawer';
@@ -30,20 +30,6 @@ const factory = (Drawer) => {
         withOverlay={!pinned}
       />
     );
-  };
-
-  NavDrawer.propTypes = {
-    active: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    clipped: PropTypes.bool,
-    permanentAt: PropTypes.oneOf(['sm', 'smTablet', 'md', 'lg', 'lgTablet', 'xl', 'xxl', 'xxxl']),
-    pinned: PropTypes.bool,
-    right: PropTypes.bool,
-    theme: PropTypes.shape({
-      clipped: PropTypes.string,
-      pinned: PropTypes.string,
-    }),
   };
 
   NavDrawer.defaultProps = {

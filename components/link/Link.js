@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { LINK } from '../identifiers';
@@ -17,23 +17,6 @@ const Link = ({ active, children, className, count, icon, label, theme, ...other
       {children}
     </a>
   );
-};
-
-Link.propTypes = {
-  active: PropTypes.bool,
-  children: PropTypes.node,
-  className: PropTypes.string,
-  count: PropTypes.number,
-  icon: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
-  label: PropTypes.string,
-  theme: PropTypes.shape({
-    active: PropTypes.string,
-    icon: PropTypes.string,
-    link: PropTypes.string,
-  }),
 };
 
 Link.defaultProps = {

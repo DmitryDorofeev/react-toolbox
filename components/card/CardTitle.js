@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { CARD } from '../identifiers';
@@ -24,33 +24,6 @@ const factory = (Avatar) => {
         </div>
       </div>
     );
-  };
-
-  CardTitle.propTypes = {
-    avatar: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    children: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-      PropTypes.array,
-    ]),
-    className: PropTypes.string,
-    subtitle: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    theme: PropTypes.shape({
-      large: PropTypes.string,
-      title: PropTypes.string,
-      small: PropTypes.string,
-      subtitle: PropTypes.string,
-    }),
-    title: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
   };
 
   return CardTitle;

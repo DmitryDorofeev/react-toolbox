@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { themr } from 'react-css-themr';
 import { LIST } from '../identifiers';
 
@@ -11,13 +11,6 @@ const ListItemAction = ({ action, theme }) => {
       {action}
     </span>
   );
-};
-
-ListItemAction.propTypes = {
-  action: PropTypes.node,
-  theme: PropTypes.shape({
-    itemAction: PropTypes.string,
-  }),
 };
 
 export default themr(LIST)(ListItemAction);

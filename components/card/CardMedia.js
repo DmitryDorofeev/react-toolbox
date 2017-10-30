@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { themr } from 'react-css-themr';
 import classnames from 'classnames';
 import { CARD } from '../identifiers';
@@ -33,25 +33,6 @@ const CardMedia = ({
       </div>
     </div>
   );
-};
-
-CardMedia.propTypes = {
-  aspectRatio: PropTypes.oneOf(['wide', 'square']),
-  children: PropTypes.node,
-  className: PropTypes.string,
-  color: PropTypes.string,
-  contentOverlay: PropTypes.bool,
-  image: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
-  theme: PropTypes.shape({
-    cardMedia: PropTypes.string,
-    content: PropTypes.string,
-    contentOverlay: PropTypes.string,
-    square: PropTypes.string,
-    wide: PropTypes.string,
-  }),
 };
 
 export default themr(CARD)(CardMedia);

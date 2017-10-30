@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { SWITCH } from '../identifiers';
@@ -7,27 +7,6 @@ import thumbFactory from './Thumb';
 
 const factory = (Thumb) => {
   class Switch extends Component {
-    static propTypes = {
-      checked: PropTypes.bool,
-      className: PropTypes.string,
-      disabled: PropTypes.bool,
-      label: PropTypes.string,
-      name: PropTypes.string,
-      onBlur: PropTypes.func,
-      onChange: PropTypes.func,
-      onFocus: PropTypes.func,
-      ripple: PropTypes.bool,
-      theme: PropTypes.shape({
-        disabled: PropTypes.string,
-        field: PropTypes.string,
-        input: PropTypes.string,
-        off: PropTypes.string,
-        on: PropTypes.string,
-        ripple: PropTypes.string,
-        text: PropTypes.string,
-        thumb: PropTypes.string,
-      }),
-    };
 
     static defaultProps = {
       checked: false,

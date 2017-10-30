@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { TIME_PICKER } from '../identifiers';
@@ -10,29 +10,6 @@ import timePickerDialogFactory from './TimePickerDialog';
 
 const factory = (TimePickerDialog, Input) => {
   class TimePicker extends Component {
-    static propTypes = {
-      active: PropTypes.bool,
-      cancelLabel: PropTypes.string,
-      className: PropTypes.string,
-      error: PropTypes.string,
-      format: PropTypes.oneOf(['24hr', 'ampm']),
-      inputClassName: PropTypes.string,
-      label: PropTypes.string,
-      name: PropTypes.string,
-      okLabel: PropTypes.string,
-      onChange: PropTypes.func,
-      onClick: PropTypes.func,
-      onDismiss: PropTypes.func,
-      onEscKeyDown: PropTypes.func,
-      onKeyPress: PropTypes.func,
-      onOverlayClick: PropTypes.func,
-      readonly: PropTypes.bool,
-      theme: PropTypes.shape({
-        container: PropTypes.string,
-        input: PropTypes.string,
-      }),
-      value: PropTypes.instanceOf(Date),
-    };
 
     static defaultProps = {
       active: false,

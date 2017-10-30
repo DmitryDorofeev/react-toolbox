@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { themr } from 'react-css-themr';
 import { LIST } from '../identifiers';
@@ -36,24 +36,6 @@ const factory = (Checkbox, ListItemContent) => {
         />
       </li>
     );
-  };
-
-  ListCheckbox.propTypes = {
-    caption: PropTypes.string,
-    checked: PropTypes.bool,
-    className: PropTypes.string,
-    disabled: PropTypes.bool,
-    legend: PropTypes.string,
-    name: PropTypes.string,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    theme: PropTypes.shape({
-      checkbox: PropTypes.string,
-      checkboxItem: PropTypes.string,
-      disabled: PropTypes.string,
-      item: PropTypes.string,
-    }),
   };
 
   ListCheckbox.defaultProps = {

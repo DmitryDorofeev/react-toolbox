@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 const factory = (ripple) => {
   const Radio = ({ checked, onMouseDown, theme, ...other }) => (
@@ -9,17 +9,6 @@ const factory = (ripple) => {
       {...other}
     />
   );
-
-  Radio.propTypes = {
-    checked: PropTypes.bool,
-    children: PropTypes.node,
-    onMouseDown: PropTypes.func,
-    theme: PropTypes.shape({
-      radio: PropTypes.string,
-      radioChecked: PropTypes.string,
-      ripple: PropTypes.string,
-    }),
-  };
 
   return ripple(Radio);
 };
