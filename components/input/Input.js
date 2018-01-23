@@ -132,17 +132,16 @@ const factory = (FontIcon) => {
         className: classnames(theme.inputElement, { [theme.filled]: valuePresent }),
         onChange: this.handleChange,
         ref: (node) => { this.inputNode = node; },
-        role: 'input',
         name,
         defaultValue,
         disabled,
         required,
-        type,
         value,
       };
       if (!multiline) {
         inputElementProps.maxLength = maxLength;
         inputElementProps.onKeyPress = onKeyPress;
+        inputElementProps.type = type;
       } else {
         inputElementProps.rows = rows;
         inputElementProps.onKeyPress = this.handleKeyPress;
